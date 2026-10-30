@@ -1,0 +1,368 @@
+{
+  "httpMsg": {
+    "unauthorized": "Unauthorized access, please login again",
+    "forbidden": "Access to this resource is forbidden",
+    "notFound": "The requested resource does not exist",
+    "methodNotAllowed": "Request method not allowed",
+    "requestTimeout": "Request timeout, please try again later",
+    "internalServerError": "Internal server error, please try again later",
+    "badGateway": "Bad gateway error, please try again later",
+    "serviceUnavailable": "Service temporarily unavailable, please try again later",
+    "gatewayTimeout": "Gateway timeout, please try again later",
+    "requestCancelled": "Request cancelled",
+    "networkError": "Network connection error, please check your connection",
+    "requestFailed": "Request failed",
+    "requestConfigError": "Request configuration error"
+  },
+  "topBar": {
+    "search": {
+      "title": "Search"
+    },
+    "user": {
+      "userCenter": "User center",
+      "docs": "Document",
+      "github": "Github",
+      "lockScreen": "Lock screen",
+      "logout": "Log out"
+    },
+    "guide": {
+      "title": "Click here to view",
+      "theme": "Theme style",
+      "menu": "Open top menu",
+      "description": "More configurations"
+    }
+  },
+  "common": {
+    "tips": "Prompt",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "logOutTips": "Do you want to log out?"
+  },
+  "search": {
+    "placeholder": "Search page",
+    "historyTitle": "Search history",
+    "switchKeydown": "Navigate",
+    "selectKeydown": "Select",
+    "exitKeydown": "Close"
+  },
+  "setting": {
+    "menuType": {
+      "title": "Menu Layout",
+      "list": [
+        "Vertical",
+        "Horizontal"
+      ]
+    },
+    "theme": {
+      "title": "Theme Style",
+      "list": [
+        "Light",
+        "Dark",
+        "System"
+      ]
+    },
+    "menu": {
+      "title": "Menu Style"
+    },
+    "color": {
+      "title": "Theme Color"
+    },
+    "box": {
+      "title": "Box Style",
+      "list": [
+        "Border",
+        "Shadow"
+      ]
+    },
+    "container": {
+      "title": "Container Width",
+      "list": [
+        "Full",
+        "Boxed"
+      ]
+    },
+    "basics": {
+      "title": "Basic Config",
+      "list": {
+        "multiTab": "Show work tab",
+        "accordion": "Sidebar opens accordion",
+        "collapseSidebar": "Show sidebar button",
+        "reloadPage": "Show reload page button",
+        "fastEnter": "Show fast enter",
+        "breadcrumb": "Show crumb navigation",
+        "language": "Show multilingual selection",
+        "progressBar": "Show top progress bar",
+        "weakMode": "Color Weakness Mode",
+        "watermark": "Global watermark",
+        "menuWidth": "Menu width",
+        "tabStyle": "Tab style",
+        "pageTransition": "Page animation",
+        "borderRadius": "Custom radius"
+      }
+    },
+    "tabStyle": {
+      "default": "Default",
+      "card": "Card",
+      "google": "Chrome"
+    },
+    "transition": {
+      "list": {
+        "none": "None",
+        "fade": "Fade",
+        "slideLeft": "Slide Left",
+        "slideBottom": "Slide Bottom",
+        "slideTop": "Slide Top"
+      }
+    },
+    "actions": {
+      "resetConfig": "Reset Config",
+      "copyConfig": "Copy Config",
+      "copySuccess": "Configuration copied to clipboard, paste it into src/config/setting.ts file",
+      "copyFailed": "Copy failed, please try again",
+      "resetFailed": "Reset failed, please refresh the page and try again"
+    }
+  },
+  "notice": {
+    "title": "Notice",
+    "btnRead": "Mark as read",
+    "bar": [
+      "Notice",
+      "Message",
+      "Todo"
+    ],
+    "text": [
+      "No"
+    ],
+    "viewAll": "View all"
+  },
+  "worktab": {
+    "btn": {
+      "refresh": "Refresh",
+      "fixed": "Fixed",
+      "unfixed": "Unfixed",
+      "closeLeft": "Close left",
+      "closeRight": "Close right",
+      "closeOther": "Close other",
+      "closeAll": "Close all"
+    }
+  },
+  "login": {
+    "leftView": {
+      "title": "A backend system of beauty and efficiency",
+      "subTitle": "A sleek and practical interface for a great user experience",
+      "backHome": "Back to home"
+    },
+    "title": "Welcome back",
+    "subTitle": "Sign in with phone SMS or account password",
+    "tabs": {
+      "sms": "SMS login",
+      "password": "Password login",
+      "social": "Third-party"
+    },
+    "field": {
+      "username": "Account",
+      "password": "Password",
+      "phone": "Phone",
+      "smsCode": "Code"
+    },
+    "placeholder": {
+      "username": "Please enter your account",
+      "password": "Please enter your password",
+      "phone": "Please enter phone number",
+      "smsCode": "Please enter SMS code",
+      "slider": "Please slide to verify"
+    },
+    "sendCode": "Get code",
+    "resendCode": "Resend in {n}s",
+    "mockCodeHint": "Dev mock code: 123456",
+    "sliderText": "Please slide to verify",
+    "sliderSuccessText": "Verification successful",
+    "rememberPwd": "Remember password",
+    "forgetPwd": "Forgot password",
+    "btnText": "Login",
+    "noAccount": "No account yet?",
+    "register": "Register",
+    "social": {
+      "divider": "Third-party",
+      "hint": "Sign in with a third-party account (coming soon)",
+      "wechat": "WeChat",
+      "qq": "QQ",
+      "comingSoon": "{method} login is coming soon"
+    },
+    "success": {
+      "title": "Login successful",
+      "message": "Welcome back"
+    }
+  },
+  "forgetPassword": {
+    "title": "Forgot password?",
+    "subTitle": "Reset password with SMS verification",
+    "placeholder": "Please enter phone number",
+    "placeholderCode": "Please enter SMS code",
+    "placeholderPassword": "New password (min 8 chars, letters + numbers)",
+    "placeholderConfirm": "Confirm new password",
+    "submitBtnText": "Reset password",
+    "backBtnText": "Back to login",
+    "success": "Password reset. Please sign in"
+  },
+  "register": {
+    "title": "Create account",
+    "subTitle": "Register with phone SMS to start genealogy",
+    "placeholder": {
+      "username": "Please enter your account",
+      "phone": "Please enter phone number",
+      "smsCode": "Please enter SMS code",
+      "password": "Password (min 8 chars, letters + numbers)",
+      "confirmPassword": "Confirm password",
+      "inviteCode": "Genealogy invite code (optional)"
+    },
+    "rule": {
+      "confirmPasswordRequired": "Please enter your password again",
+      "passwordMismatch": "The two passwords are inconsistent!",
+      "usernameLength": "The length is 3 to 20 characters",
+      "passwordLength": "Password must be at least 8 characters with letters and numbers",
+      "phoneInvalid": "Please enter a valid phone number",
+      "agreementRequired": "Please agree to the privacy policy",
+      "inviteCodeInvalid": "Invalid invite code format"
+    },
+    "inviteCodeHint": "Joining makes you a read-only member. Editors need a separate collaborator invite. Mock demo: YCDEMO01",
+    "agreeText": "I agree",
+    "privacyPolicy": "Privacy Policy",
+    "userAgreement": "User Agreement",
+    "submitBtnText": "Register",
+    "hasAccount": "Already have an account?",
+    "toLogin": "Sign in",
+    "success": "Registered successfully. Please sign in",
+    "successWithInvite": "Registered and joined as a read-only member. Please sign in"
+  },
+  "lockScreen": {
+    "pwdError": "Password error",
+    "lock": {
+      "inputPlaceholder": "Please input lock screen password",
+      "btnText": "Lock"
+    },
+    "unlock": {
+      "inputPlaceholder": "Please input unlock password",
+      "btnText": "Unlock",
+      "backBtnText": "Back to login"
+    }
+  },
+  "greeting": {
+    "dawn": "Good morning!",
+    "morning": "Good morning!",
+    "afternoon": "Good afternoon!",
+    "evening": "Good evening!"
+  },
+  "exceptionPage": {
+    "403": "Sorry, you do not have permission to access this page",
+    "404": "Sorry, the page you are trying to access does not exist",
+    "500": "Sorry, there was an error on the server",
+    "gohome": "Go Home"
+  },
+  "menus": {
+    "login": {
+      "title": "Login"
+    },
+    "register": {
+      "title": "Register"
+    },
+    "forgetPassword": {
+      "title": "Forget Password"
+    },
+    "outside": {
+      "title": "Outside"
+    },
+    "dashboard": {
+      "title": "Workbench",
+      "console": "Demo console"
+    },
+    "app": {
+      "console": "Home",
+      "genealogies": "My genealogies",
+      "subscription": "Subscription",
+      "subscriptionPlan": "My plan",
+      "subscriptionPurchase": "Purchase",
+      "subscriptionQuota": "Quota log",
+      "subscriptionOrders": "Orders",
+      "account": "Account"
+    },
+    "ops": {
+      "title": "Ops Admin",
+      "dashboard": "Ops dashboard",
+      "users": "Users",
+      "orders": "Orders",
+      "audit": "Audit log"
+    },
+    "genealogy": {
+      "title": "Genealogy",
+      "overview": "Workbench",
+      "project": "Project start",
+      "info": "Info management",
+      "infoPersons": "People",
+      "infoRelations": "Relationships",
+      "infoGeneration": "Generation names",
+      "collect": "Info management",
+      "compose": "Composition",
+      "review": "Proofreading",
+      "layout": "Smart layout",
+      "archive": "Publish & archive",
+      "culture": "Family culture",
+      "cultureRules": "Family rules",
+      "cultureEvents": "Family events",
+      "cultureOrigin": "Surname origin",
+      "cultureHall": "Hall name origin",
+      "cultureAlbum": "Family album",
+      "archives": "Archives",
+      "settings": "Permissions",
+      "settingsRoles": "Roles",
+      "settingsBranches": "Branch leads",
+      "settingsPermissions": "Permission settings"
+    },
+    "result": {
+      "title": "Result Page",
+      "success": "Success",
+      "fail": "Fail"
+    },
+    "exception": {
+      "title": "Exception",
+      "forbidden": "403",
+      "notFound": "404",
+      "serverError": "500"
+    },
+    "system": {
+      "title": "System Settings",
+      "user": "User Manage",
+      "role": "Role Manage",
+      "userCenter": "User Center",
+      "menu": "Menu Manage"
+    }
+  },
+  "table": {
+    "form": {
+      "reset": "Reset",
+      "submit": "Submit"
+    },
+    "searchBar": {
+      "reset": "Reset",
+      "search": "Search",
+      "expand": "Expand",
+      "collapse": "Collapse",
+      "searchInputPlaceholder": "Please enter",
+      "searchSelectPlaceholder": "Please select"
+    },
+    "selection": "Select",
+    "sizeOptions": {
+      "small": "Compact",
+      "default": "Default",
+      "large": "Loose"
+    },
+    "column": {
+      "selection": "Select",
+      "expand": "Expand",
+      "index": "Index"
+    },
+    "zebra": "Zebra",
+    "border": "Border",
+    "headerBackground": "Header BG"
+  }
+}

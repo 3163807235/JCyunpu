@@ -1,0 +1,37 @@
+---
+description: ElDialog 必须限制在视口内，头尾固定、仅 body 滚动
+globs: frontend/**/*.{vue,scss,css}
+alwaysApply: false
+---
+
+# ElDialog 视口约束（强制）
+
+所有 `ElDialog` / Element Plus 弹窗必须保证**完整落在浏览器可视区域内**，禁止整窗被裁切或整页跟着滚。
+
+## 行为要求
+
+1. **最大高度**：弹窗整体 `max-height` 不超过视口（实现见 `frontend/src/assets/styles/core/el-ui.scss`，约 `min(90vh, 100dvh - 48px)`）。
+2. **结构**：标题（`el-dialog__header`）与底部按钮区（`el-dialog__footer`）**固定可见**，不随内容滚动。
+3. **滚动**：仅中间内容区（`el-dialog__body`）独立纵向滚动（`overflow-y: auto` + flex `min-height: 0`）。
+4. **边距**：弹窗与视口上下保留安全边距（实现里为约 24px），避免贴边。
+
+## 开发约束
+
+- **优先依赖全局样式**，不要在业务弹窗上再写一套互相冲突的 `max-height` / `overflow`，除非有文档明确例外（如全屏弹窗）。
+- **垂直居中**：新增业务弹窗请加 `align-center`（全局 `.el-overlay-dialog` 已默认 flex 居中；显式写上避免被局部样式覆盖）。
+- 新增弹窗内容过长时，**不要**把滚动写在 `ElDialog` 根节点或外层页面；内容放在默认 `body` 槽内即可自动滚动。
+- 若使用自定义 class 覆盖 dialog 布局，必须仍满足：头尾不滚、仅 body 滚、整体不超出视口。
+- 权威约定同步写在 [`frontend/项目原始文档.md`](frontend/项目原始文档.md)「本项目定制 · 弹窗视口」。
+
+## 反例
+
+```vue
+<!-- ❌ BAD：整窗 overflow 或固定超高，导致头/底滚出视口 -->
+<ElDialog class="h-[1200px] overflow-auto">...</ElDialog>
+
+<!-- ✅ GOOD：内容再长也只滚 body；沿用全局 el-dialog 样式 -->
+<ElDialog title="编辑" width="720px">
+  <div><!-- 长表单 --></div>
+  <template #footer>...</template>
+</ElDialog>
+```

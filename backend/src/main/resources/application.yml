@@ -1,0 +1,80 @@
+server:
+  port: ${SERVER_PORT:8080}
+
+spring:
+  application:
+    name: jcyunpu-server
+  profiles:
+    active: ${SPRING_PROFILES_ACTIVE:local}
+  jackson:
+    time-zone: Asia/Shanghai
+    default-property-inclusion: non_null
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:127.0.0.1}:${MYSQL_PORT:3306}/${MYSQL_DB:jcyunpu}?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false
+    username: ${MYSQL_USER:jcyunpu}
+    password: ${MYSQL_PASSWORD:change_me}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  data:
+    redis:
+      host: ${REDIS_HOST:127.0.0.1}
+      port: ${REDIS_PORT:6379}
+      password: ${REDIS_PASSWORD:}
+  rabbitmq:
+    host: ${RABBITMQ_HOST:127.0.0.1}
+    port: ${RABBITMQ_PORT:5672}
+    username: ${RABBITMQ_USER:guest}
+    password: ${RABBITMQ_PASSWORD:guest}
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+    baseline-on-migrate: true
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
+  global-config:
+    db-config:
+      logic-delete-field: isDeleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+      id-type: auto
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: when_authorized
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+
+jcyunpu:
+  jwt:
+    access-secret: ${JWT_ACCESS_SECRET:change_me_access}
+    refresh-secret: ${JWT_REFRESH_SECRET:change_me_refresh}
+    access-ttl-seconds: ${JWT_ACCESS_TTL_SECONDS:7200}
+    refresh-ttl-seconds: ${JWT_REFRESH_TTL_SECONDS:604800}
+  sms:
+    mock-enabled: ${SMS_MOCK_ENABLED:true}
+    mock-code: ${SMS_MOCK_CODE:123456}
+  payment:
+    mock-enabled: ${PAYMENT_MOCK_ENABLED:true}
+  storage:
+    type: ${STORAGE_TYPE:minio}
+    minio:
+      endpoint: ${MINIO_ENDPOINT:http://127.0.0.1:9000}
+      access-key: ${MINIO_ACCESS_KEY:minioadmin}
+      secret-key: ${MINIO_SECRET_KEY:minioadmin}
+      bucket: ${MINIO_BUCKET:jcyunpu}
+
+logging:
+  level:
+    root: INFO
+    com.jcyunpu: DEBUG

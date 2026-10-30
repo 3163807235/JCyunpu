@@ -1,0 +1,48 @@
+# dependencies
+node_modules/
+**/node_modules/
+
+# build
+dist/
+**/dist/
+target/
+**/target/
+*.class
+
+# env / secrets
+.env
+.env.local
+.env.*.local
+backend/.env
+**/.env
+
+# keep env examples and frontend env templates
+!.env.example
+!**/.env.example
+!frontend/.env
+!frontend/.env.development
+!frontend/.env.production
+
+# IDE / OS
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+*.log
+
+# local tooling / smoke artifacts
+tools/node_modules/
+tools/package-lock.json
+tools/package.json
+tools/.manual-collab-ui/
+tools/tools/
+
+# misc
+.classpath
+.project
+.settings/
+
+# never commit installers / local tech dumps
+*.exe
+开发技术/

@@ -1,0 +1,11 @@
+# local：MySQL 用本机；Redis 用 Docker；MQ/MinIO 未就绪时不阻塞启动
+spring:
+  flyway:
+    enabled: true
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.amqp.RabbitAutoConfiguration
+
+logging:
+  level:
+    com.jcyunpu: DEBUG
